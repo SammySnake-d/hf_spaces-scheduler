@@ -3,6 +3,8 @@ name: Restart Hugging Face Space
 on:
  schedule:
    - cron: '0 0 */14 * *' # Runs every 14 days
+   
+ workflow_dispatch:  #允许手动
 
 jobs:
   restart-space:
