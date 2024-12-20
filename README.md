@@ -23,7 +23,9 @@ Follow these instructions to schedule automated rebuilds of your Hugging Face Sp
 ```python
 def restart_space():
     token = os.environ['HF_TOKEN'] # Please navigate to Settings > Secrets and variables > Actions and define "HF_TOKEN".
-    repo_id = "DIBT-Russian/MPEP_Dashboard" #  Please replace this value with the name of your own Hugging Face Space.
+    user = os.environ['HF_USER']
+    space = os.environ['HF_SPACE']
+    repo_id = f"{user}/{space}" #  Please replace this value with the name of your own Hugging Face Space.
 ```
 
 4. Modify `DIBT-Russian/MPEP_Dashbaord` to point to your Hugging Face Space using the syntax `{{USER OR ORGANIZATION}}/{{SPACE}}`.
